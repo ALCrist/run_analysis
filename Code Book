@@ -1,7 +1,8 @@
 Code Book
 Procedures
 
- This script downloads a zip file containing measurements from wearable computing devices and extracts the mean and standard deviation for each measurement using the following steps:
+ This script downloads a zip file containing measurements from wearable computing devices and extracts the mean 
+ and standard deviation for each measurement using the following steps:
 1.	Sets working directory.
 2.	Installs libraries of packages needed to perform work.
 1.	Downloads and installs the .zip file to data folder if it doesn't already exist in working directory.
