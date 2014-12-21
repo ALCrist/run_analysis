@@ -1,0 +1,36 @@
+Code Book
+Procedures
+
+ This script downloads a zip file containing measurements from wearable computing devices and extracts the mean and standard deviation for each measurement using the following steps:
+1.	Sets working directory.
+2.	Installs libraries of packages needed to perform work.
+1.	Downloads and installs the .zip file to data folder if it doesn't already exist in working directory.
+3.	Adds data folder to working directory.
+4.	Retrieves features to be used as column headings; creates mean/std column filter.
+5.	Retrieves activity descriptions.
+6.	Determines dataset's variable classes.
+7.	Combines test and train subject tables.
+8.	Combines test and train activity labels and adds activity description to labels.
+9.	Combines test and train datasets and adds activity labels and subjects to dataset.
+10.	Creates tidy dataset by doing the following:
+11.	Groups data by feature measurements:
+i.	Separates feature measurement column into 3 columns:  
+i.	feature, 
+ii.	axis and 
+iii.	measure.
+ii.	Groups the data observations by activity, subject, feature, axis and measure.
+iii.	Calculates the averages (mean) for the mean and std measurement values.
+iv.	Moves the average mean and std observations to 2 columns.
+12.	Write the tidy dataset to a .txt file in the working directory.
+Variables
+
+Variable Name					Description																																		Attributes
+id										Activity identifier code that links the activity to the observation						Integer
+activity							Descriptive term of the activity for the observation													Character
+subject_id						Subject identifier code that links activities to person in study							Integer
+	feature							The feature that is being measured during the activity												Character
+axis									Certain features are measured on three axis:  X, Y and Z											Character
+mean									The average mean measurement of all observations for a given activity, 
+												subject and feature																													Numeric
+std										The average standard deviation measurement of all observations for a 
+												given activity, subject and feature																					Numeric
